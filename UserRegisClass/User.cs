@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.Design;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
-
+﻿
 namespace UserRegisClass;
 
 public class User
@@ -21,7 +18,9 @@ public class User
             {
                 if (password != null && password.Length >= 8 && passwordNeedChar(password))
                 {
-
+                    this.Password = password;
+                    this.UserName = userN;
+                    this.Email = email;
                 }
                 else throw new ArgumentException("password must be over 8 Characters and need to have special Character");
             }
@@ -30,11 +29,9 @@ public class User
                 throw new ArgumentException("UserName need to be between 5 and 20 Characters");
             }
             
-        }
-         
-             
-
-
+            
+        } else  throw new ArgumentException("your Email has to end with  @Hotmail or @Gmail ");
+       
     
     
     }
