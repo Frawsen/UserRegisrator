@@ -3,7 +3,8 @@
 namespace UserRegisClass;
 public class UserCollections
 {
-
+    // user collections som gör en lista av användarna och där ifrån kan se om användaren redan finns
+    // annars lägger den till användaren via metoden useradding
     List<User> users = new List<User>();
 
     public string UserAdding(User user)
